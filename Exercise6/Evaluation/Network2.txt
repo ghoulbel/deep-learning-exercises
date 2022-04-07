@@ -1,0 +1,45 @@
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 32, 32, 32)        896       
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 16, 16, 32)       0         
+ )                                                               
+                                                                 
+ batch_normalization (BatchN  (None, 16, 16, 32)       128       
+ ormalization)                                                   
+                                                                 
+ conv2d_1 (Conv2D)           (None, 16, 16, 32)        25632     
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 8, 8, 32)         0         
+ 2D)                                                             
+                                                                 
+ batch_normalization_1 (Batc  (None, 8, 8, 32)         128       
+ hNormalization)                                                 
+                                                                 
+ conv2d_2 (Conv2D)           (None, 8, 8, 32)          50208     
+                                                                 
+ max_pooling2d_2 (MaxPooling  (None, 4, 4, 32)         0         
+ 2D)                                                             
+                                                                 
+ batch_normalization_2 (Batc  (None, 4, 4, 32)         128       
+ hNormalization)                                                 
+                                                                 
+ flatten (Flatten)           (None, 512)               0         
+                                                                 
+ dense (Dense)               (None, 10)                5130      
+                                                                 
+=================================================================
+Total params: 82,250
+Trainable params: 82,058
+Non-trainable params: 192
+_________________________________________________________________
+None
+
+EPOCHS: 30
+
+Loss after epoch:
+10:     loss: 0.3544 - accuracy: 0.8769 - val_loss: 1.0541 - val_accuracy: 0.7083
+20:     loss: 0.1245 - accuracy: 0.9572 - val_loss: 1.5435 - val_accuracy: 0.7022
+30:     loss: 0.0848 - accuracy: 0.9697 - val_loss: 1.8152 - val_accuracy: 0.7069

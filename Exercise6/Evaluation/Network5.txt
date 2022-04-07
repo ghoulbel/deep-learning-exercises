@@ -1,0 +1,51 @@
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 32, 32, 32)        896       
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 16, 16, 32)       0         
+ )                                                               
+                                                                 
+ batch_normalization (BatchN  (None, 16, 16, 32)       128       
+ ormalization)                                                   
+                                                                 
+ dropout (Dropout)           (None, 16, 16, 32)        0         
+                                                                 
+ conv2d_1 (Conv2D)           (None, 16, 16, 64)        51264     
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 8, 8, 64)         0         
+ 2D)                                                             
+                                                                 
+ batch_normalization_1 (Batc  (None, 8, 8, 64)         256       
+ hNormalization)                                                 
+                                                                 
+ dropout_1 (Dropout)         (None, 8, 8, 64)          0         
+                                                                 
+ conv2d_2 (Conv2D)           (None, 8, 8, 128)         401536    
+                                                                 
+ max_pooling2d_2 (MaxPooling  (None, 4, 4, 128)        0         
+ 2D)                                                             
+                                                                 
+ batch_normalization_2 (Batc  (None, 4, 4, 128)        512       
+ hNormalization)                                                 
+                                                                 
+ dropout_2 (Dropout)         (None, 4, 4, 128)         0         
+                                                                 
+ flatten (Flatten)           (None, 2048)              0         
+                                                                 
+ dense (Dense)               (None, 10)                20490     
+                                                                 
+=================================================================
+Total params: 475,082
+Trainable params: 474,634
+Non-trainable params: 448
+_________________________________________________________________
+None
+
+EPOCHS: 30
+
+Loss after epoch:
+10:     loss: 0.4078 - accuracy: 0.8565 - val_loss: 0.8269 - val_accuracy: 0.7460
+20:     loss: 0.2362 - accuracy: 0.9163 - val_loss: 0.7831 - val_accuracy: 0.7776
+30:     loss: 0.1733 - accuracy: 0.9393 - val_loss: 0.9398 - val_accuracy: 0.7747
